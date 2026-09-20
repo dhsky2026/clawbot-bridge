@@ -1,0 +1,27 @@
+# DHSTUDIO x 阿宝 · 协作通道「云端算力探针」
+# CMD-20260920-016-02080 · 目的：实测 CNB 云原生构建能否担任「第二算力」
+# 设计原则：只读探针，不回写仓库（避免 push 自触发循环）
+main:
+  push:
+    - name: bridge-probe
+      stages:
+        - name: env-probe
+          image: python:3.11
+          script: |
+            echo "===== CNB 云端算力探针 ====="
+            date -u
+            python -V
+            echo "--- CPU ---"
+            nproc 2>/dev/null || echo "nproc n/a"
+            echo "--- MEM ---"
+            (free -m | head -3) 2>/dev/null || echo "free n/a"
+            echo "--- BENCH ---"
+            python -c "import os,platform,sys,time;print('cpus',os.cpu_count());print('machine',platform.machine());print('py',sys.version.split()[0]);t=time.time();s=sum(i*i for i in range(5000000));print('bench_5M_acc=%.3fs'%(time.time()-t));print('sum',s)"
+            echo "===== env-probe done ====="
+        - name: net-probe
+          image: python:3.11
+          script: |
+            echo "===== 云端出网探测（阿宝沙盒出不去，CNB 云端是否可行）====="
+            python -c "import urllib.request;r=urllib.request.urlopen('https://pypi.org/simple/',timeout=20);print('pypi HTTP',r.status)" || echo "net-probe: pypi FAILED"
+            python -c "import urllib.request;r=urllib.request.urlopen('https://api.cnb.cool/user',timeout=20);print('cnb-api HTTP',r.status)" || echo "net-probe: cnb-api FAILED(预期401)"
+            echo "===== net-probe done ====="

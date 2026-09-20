@@ -2,6 +2,7 @@
 *
 !abao_bridge/
 !abao_bridge/**
+!.cnb.yml
 !.gitignore
 
 # 显式再挡一层敏感文件
