@@ -4,6 +4,11 @@
 main:
   push:
     - name: bridge-probe
+      # 成本护栏（02084）：显式声明【最小节点规格】。
+      # CNB 默认给 8 核（8核×1h=8核时，160 核时只够 20 小时）；
+      # 用 1 核跑同样时长仅 1 核时 → 免费额度可支撑 160 小时。
+      runner:
+        cpus: 1
       stages:
         - name: env-probe
           image: python:3.11
