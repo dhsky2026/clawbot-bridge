@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MD Viewer - Markdown 完整预览器</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css" id="hljs-theme">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/highlight.min.js"></script>
+
+<style>
+  :root {
+    --bg:#fff;--text:#24292f;--border:#d0d7de;--code-bg:#f6f8fa;
+    --sidebar-bg:#f6f8fa;--link:#0969da;--muted:#6e7781;
+  }
+  [data-theme="dark"] {
+    --bg:#0d1117;--text:#e6edf3;--border:#30363d;--code-bg:#161b22;
+    --sidebar-bg:#161b22;--link:#58a6ff;--muted:#8b949e;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--text);height:100vh;display:flex;overflow:hidden}
+  #sidebar{width:280px;background:var(--sidebar-bg);border-right:1px solid var(--border);
+    display:flex;flex-direction:column;flex-shrink:0}
+  #toolbar{padding:10px;border-bottom:1px solid var(--border);display:flex;gap:6px;flex-wrap:wrap}
+  #toolbar button,#toolbar label{flex:1;min-width:70px;padding:7px 6px;font-size:12px;cursor:pointer;
+    background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:5px;text-align:center;user-select:none}
+  #toolbar button:hover,#toolbar label:hover{background:var(--code-bg)}
+  #toolbar input[type=file]{display:none}
+  #file-info{padding:8px 12px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--border);word-break:break-all}
+  #root-info{padding:6px 12px;font-size:11px;color:var(--muted);background:var(--bg);word-break:break-all}
+  #toc{flex:1;overflow-y:auto;padding:8px 12px;font-size:13px}
+  #toc a{display:block;padding:3px 0;color:var(--text);text-decoration:none;border-radius:3px}
+  #toc a:hover{color:var(--link);background:var(--code-bg);padding-left:4px}
+  #toc .lvl-2{padding-left:14px}
+  #toc .lvl-3{padding-left:28px}
+  #main{flex:1;overflow-y:auto;padding:32px 48px;position:relative}
+  #content{max-width:920px;margin:0 auto;line-height:1.75;padding-bottom:80px}
+  #content h1,#content h2{border-bottom:1px solid var(--border);padding-bottom:.3em;margin-top:1.5em}
+  #content h1:first-child{margin-top:0}
+  #content a{color:var(--link)}
+  #content code{background:var(--code-bg);padding:.2em .4em;border-radius:4px;font-size:85%}
+  #content pre{background:var(--code-bg);padding:16px;border-radius:8px;overflow-x:auto}
+  #content pre code{background:none;padding:0}
+  #content blockquote{color:var(--muted);border-left:.25em solid var(--border);margin:0;padding:0 1em}
+  #content table{border-collapse:collapse}
+  #content th,#content td{border:1px solid var(--border);padding:6px 13px}
+  #content th{background:var(--code-bg)}
+  #content img{max-width:100%}
+  #content .task-list-item{list-style:none}
+  #content .contains-task-list{padding-left:20px}
+  #drop-overlay{position:fixed;inset:0;background:rgba(9,105,218,.08);border:4px dashed var(--link);
+    display:none;align-items:center;justify-content:center;font-size:22px;color:var(--link);
+    z-index:999;pointer-events:none;text-align:center}
+  #welcome{text-align:center;color:var(--muted);padding:80px 20px}
+  #welcome h2{color:var(--text)}
+  #status{position:fixed;bottom:12px;right:16px;font-size:12px;color:var(--muted);background:var(--bg);
+    padding:4px 10px;border:1px solid var(--border);border-radius:12px;opacity:.8}
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+  <div id="toolbar">
+    <label for="file-input">📂 打开文件</label>
+    <input type="file" id="file-input" accept=".md,.markdown,.txt">
+    <button id="btn-root">📁 设根目录</button>
+    <input type="file" id="dir-input" webkitdirectory directory multiple style="display:none">
+    <button id="btn-theme" title="明暗主题">🌙</button>
+    <button id="btn-reload" title="重新渲染">🔄</button>
+  </div>
+  <div id="file-info">未打开文件</div>
+  <div id="root-info">根目录：未设置（相对路径将基于当前文件）</div>
+  <div id="toc"></div>
+</div>
+
+<div id="main">
+  <div id="content">
+    <div id="welcome">
+      <h2>📄 MD 完整预览器</h2>
+      <p>将 <b>.md 文件</b> 拖拽到此处，或点击「📂 打开文件」</p>
+      <p style="font-size:13px">
+        ✅ GFM 表格 · 任务列表 · 代码高亮 · 目录导航<br>
+        ✅ 相对路径 / 绝对路径 / http / 锚点 全部可点<br>
+        💡 若链接较多，点「📁 设根目录」选 md 所在文件夹更准确
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="drop-overlay">松开以打开 Markdown 文件</div>
+<div id="status"></div>
+
+<script src="md-renderer.js"></script>
+<script src="md-link-handler.js"></script>
+<script>
+(function(){
+  'use strict';
+
+  var contentEl=document.getElementById('content');
+  var fileInfoEl=document.getElementById('file-info');
+  var rootInfoEl=document.getElementById('root-info');
+  var tocEl=document.getElementById('toc');
+  var fileInput=document.getElementById('file-input');
+  var dirInput=document.getElementById('dir-input');
+  var dropOverlay=document.getElementById('drop-overlay');
+  var statusEl=document.getElementById('status');
+
+  var currentFile=null;
+  var currentUrl='';
+  var rootDir=''; // 用户设置的根目录（file://）
+
+  if(window.MDRenderer)MDRenderer.init();
+  MDLinkHandler.setBridge(location.href.split('#')[0].split('?')[0]+'bridge.html');
+
+  /* ---------- 主题 ---------- */
+  var themeBtn=document.getElementById('btn-theme');
+  var savedTheme=localStorage.getItem('md-theme')||'light';
+  applyTheme(savedTheme);
+  themeBtn.onclick=function(){
+    savedTheme=savedTheme==='light'?'dark':'light';
+    applyTheme(savedTheme);localStorage.setItem('md-theme',savedTheme);
+  };
+  function applyTheme(t){
+    document.body.setAttribute('data-theme',t);
+    themeBtn.textContent=t==='light'?'🌙':'☀️';
+    var hl=document.getElementById('hljs-theme');
+    if(hl)hl.href=t==='light'
+      ?'https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css'
+      :'https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github-dark.min.css';
+  }
+
+  /* ---------- 根目录设置 ---------- */
+  document.getElementById('btn-root').onclick=function(){
+    // 优先用现代 API 选择目录
+    if(window.showDirectoryPicker){
+      showDirectoryPicker().then(function(handle){
+        // 通过 File System Access API 获取目录句柄，用 origin private 路径
+        // 此处简化为：提示用户，并用 handle 读取文件
+        rootInfoEl.textContent='根目录：'+(handle.name||'已选择')+'（File System Access API）';
+        window.__rootHandle=handle;
+        setStatus('已选择根目录，可直接在目录树中打开文件');
+      }).catch(function(){/* 用户取消 */});
+    }else{
+      // 降级：让用户选文件夹（webkitdirectory）
+      dirInput.click();
+    }
+  };
+  dirInput.onchange=function(e){
+    var files=e.target.files;
+    if(files&&files.length){
+      // 记录根目录前缀（files[0].webkitRelativePath 的第一段）
+      var rel=files[0].webkitRelativePath||'';
+      var rootName=rel.split('/')[0]||'文件夹';
+      rootInfoEl.textContent='根目录：'+rootName+'（含 '+files.length+' 个文件）';
+      window.__rootFiles=files; // FileList，按 webkitRelativePath 索引
+      setStatus('已加载文件夹，可通过链接按相对路径跳转');
+      // 自动打开第一个 .md
+      for(var i=0;i<files.length;i++){
+        if(/\.(md|markdown)$/i.test(files[i].name)){
+          loadFile(files[i]);break;
+        }
+      }
+    }
+  };
+
+  /* ---------- 打开文件 ---------- */
+  fileInput.onchange=function(e){
+    var f=e.target.files&&e.target.files[0];
+    if(f)loadFile(f);
+  };
+
+  function loadFile(file){
+    currentFile=file;
+    var reader=new FileReader();
+    reader.onload=function(ev){
+      renderMarkdown(String(ev.target.result),file);
+    };
+    reader.readAsText(file,'utf-8');
+  }
+
+  function renderMarkdown(md,file){
+    // baseDir：优先用 rootDir，其次用当前文件虚拟目录
+    if(rootDir)MDLinkHandler.setRoot(rootDir);
+    currentUrl=URL.createObjectURL(file);
+    MDLinkHandler.setBaseDir(currentUrl);
+
+    var html=MDRenderer.render(md);
+    contentEl.innerHTML=html;
+
+    if(window.hljs){
+      contentEl.querySelectorAll('pre code').forEach(function(b){
+        try{hljs.highlightElement(b);}catch(e){}
+      });
+    }
+
+    // 处理勾选框交互
+    contentEl.querySelectorAll('input[type=checkbox]').forEach(function(cb){
+      cb.addEventListener('click',function(ev){ev.stopPropagation();});
+    });
+
+    MDLinkHandler.bind(contentEl);
+    fileInfoEl.textContent=file.name+'  ('+formatSize(file.size)+')';
+    buildTOC(contentEl);
+    setStatus('已渲染');
+  }
+
+  /* ---------- 目录 ---------- */
+  function buildTOC(root){
+    var hs=root.querySelectorAll('h1,h2,h3');
+    tocEl.innerHTML='';
+    if(!hs.length){tocEl.innerHTML='<div style="color:var(--muted)">无标题</div>';return;}
+    hs.forEach(function(h,i){
+      if(!h.id)h.id='h-'+i;
+      var a=document.createElement('a');
+      a.href='#'+h.id;a.textContent=h.textContent;
+      a.className='lvl-'+h.tagName.charAt(1);
+      a.onclick=function(ev){ev.preventDefault();h.scrollIntoView({behavior:'smooth',block:'start'});};
+      tocEl.appendChild(a);
+    });
+  }
+
+  /* ---------- 拖拽 ---------- */
+  window.addEventListener('dragover',function(e){e.preventDefault();dropOverlay.style.display='flex';});
+  window.addEventListener('dragleave',function(){dropOverlay.style.display='none';});
+  window.addEventListener('drop',function(e){
+    e.preventDefault();dropOverlay.style.display='none';
+    var f=e.dataTransfer.files&&e.dataTransfer.files[0];
+    if(f&&/\.(md|markdown|txt)$/i.test(f.name))loadFile(f);
+    else alert('请拖拽 .md 文件');
+  });
+
+  /* ---------- 启动参数 ?open= ---------- */
+  (function(){
+    var m=/[?&]open=([^&]+)/.exec(location.search||location.hash||'');
+    if(m){
+      var target=decodeURIComponent(m[1]);
+      // 若是 file:// 路径，用 bridge 中转打开（因为 file:// 页不能 fetch 本地文件）
+      // 这里我们只能通过用户重新拖拽该文件来实现，故提示
+      setStatus('启动参数：'+target);
+      // 尝试通过 a 标签打开（仅 http:// 服务器模式下有效）
+      var a=document.createElement('a');a.href=target;
+      console.log('[MD Viewer] launch target:',target);
+    }
+  })();
+
+  /* ---------- 桥接跳转处理 ---------- */
+  (function(){
+    var m=/[?&#]target=([^&]+)/.exec(location.hash||'');
+    if(m){
+      var target=decodeURIComponent(m[1]);
+      history.replaceState(null,'',location.pathname+location.search);
+      var a=document.createElement('a');a.href=target;
+      if(/^file:/i.test(target))a.target='_blank';
+      document.body.appendChild(a);a.click();document.body.removeChild(a);
+      contentEl.innerHTML='<div id="welcome"><h2>已尝试打开链接</h2><p style="word-break:break-all">'+target+'</p>'+
+        '<p style="font-size:13px">若未自动打开，请复制上方路径在资源管理器中访问。</p></div>';
+    }
+  })();
+
+  function setStatus(t){statusEl.textContent=t;}
+  function formatSize(b){
+    if(b<1024)return b+' B';
+    if(b<1048576)return(b/1024).toFixed(1)+' KB';
+    return(b/1048576).toFixed(1)+' MB';
+  }
+
+  /* ---------- 暴露给桥接页：读取根目录文件 ---------- */
+  window.MDViewer={
+    getRootFiles:function(){return window.__rootFiles||null;},
+    getRootHandle:function(){return window.__rootHandle||null;},
+    setRootDir:function(d){rootDir=d;MDLinkHandler.setRoot(d);}
+  };
+
+})(window);
+</script>
+</body>
+</html>

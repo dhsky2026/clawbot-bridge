@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>MD Viewer - 链接跳转桥接</title>
+<script>
+(function () {
+  // 读取 #target= 参数并跳转
+  var hash = location.hash || '';
+  var m = /[?&#]target=([^&]+)/.exec(hash);
+  if (m) {
+    var target = decodeURIComponent(m[1]);
+    // 清掉 hash
+    setTimeout(function () {
+      history.replaceState(null, '', location.pathname + location.search);
+    }, 0);
+    // 若目标是 md/markdown，重定向到主预览器并带上文件路径
+    if (/\.(md|markdown)([?#].*)?$/i.test(target)) {
+      var main = location.href.split('/').slice(0, -1).join('/') + '/md-preview.html';
+      location.replace(main + (main.indexOf('?') >= 0 ? '&' : '?') + 'open=' + encodeURIComponent(target));
+      return;
+    }
+    // 其他文件（图片/PDF等）直接打开
+    location.replace(target);
+    return;
+  }
+  // 无参数：回到主预览器
+  location.replace('md-preview.html');
+})();
+</script>
+</head>
+<body>
+  <p>正在打开链接... 若未自动跳转，请返回上一页。</p>
+</body>
+</html>

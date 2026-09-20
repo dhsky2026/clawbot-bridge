@@ -1,0 +1,13 @@
+# 白名单式：只允许 abao_bridge/ 入库，其余一律忽略
+*
+!abao_bridge/
+!abao_bridge/**
+!.gitignore
+
+# 显式再挡一层敏感文件
+*.token
+*.key
+*.pem
+.env
+*token*.txt
+*.db
