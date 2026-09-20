@@ -25,3 +25,29 @@ main:
             python -c "import urllib.request;r=urllib.request.urlopen('https://pypi.org/simple/',timeout=20);print('pypi HTTP',r.status)" || echo "net-probe: pypi FAILED"
             python -c "import urllib.request;r=urllib.request.urlopen('https://api.cnb.cool/user',timeout=20);print('cnb-api HTTP',r.status)" || echo "net-probe: cnb-api FAILED(预期401)"
             echo "===== net-probe done ====="
+        # 结果回写：把云端执行结果推回 probe-result 分支
+        # 作用：解决"臣在真机看不到云端日志"的根本问题 —— 回写成功即可 pull 回收
+        # 防循环：本文件只监听 main 的 push；回写走独立分支 probe-result
+        # 成本护栏：每 5min 冻结用量，本任务秒级完成 → 单次消耗约 0.01 核时
+        - name: writeback
+          image: python:3.11
+          script: |
+            set -e
+            mkdir -p abao_bridge/probe
+            {
+              echo "# CNB 云端探针结果（自动回写）"
+              echo ""
+              echo "- 运行时刻(UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
+              echo "- 提交: ${CNB_COMMIT:-unknown}"
+              echo "- Python: $(python -V 2>&1)"
+              echo "- CPU 核数: $(python -c 'import os;print(os.cpu_count())')"
+              echo "- 出网测试:"
+              python -c "import urllib.request;print('  - pypi HTTP', urllib.request.urlopen('https://pypi.org/simple/',timeout=20).status)" 2>&1 | sed 's/^/  /' || echo "  - pypi 不可达"
+              echo ""
+              echo "> 本文件由 CNB 流水线自动生成，用于向真机侧证明云端已执行"
+            } > abao_bridge/probe/LATEST.md
+            git config user.name "CNB-Bot"
+            git config user.email "cnb-bot@cnb.cool"
+            git add -A
+            git commit -m "[CNB] cloud probe result $(date -u +%Y%m%d-%H%M%S)" || echo "no change"
+            git push origin HEAD:probe-result && echo "WRITEBACK_OK" || echo "WRITEBACK_FAILED"
