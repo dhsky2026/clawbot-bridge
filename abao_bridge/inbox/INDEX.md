@@ -1,0 +1,68 @@
+# 本轮投递 · INDEX（阿宝只读本文件）
+
+> 取件：读本文件即可，**无需主公转发附件**。
+> 链接形态一律 `blob/<path>?plain=1`（条件③）。
+
+## 本轮新增
+
+- [CMD-20260930-009-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260930-009-01-AGUI-to-ABao.md?plain=1)
+
+## 全部在库文件
+
+- [20260920-AGUI_REPLY_通道方案v2.0.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260920-AGUI_REPLY_通道方案v2.0.md?plain=1)
+- [20260921-A-000006-AGUI_TASK-005-md查看器-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260921-A-000006-AGUI_TASK-005-md查看器-给阿宝.md?plain=1)
+- [20260921-A-000012-AGUI_通道已打通-给阿宝-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260921-A-000012-AGUI_通道已打通-给阿宝-v1.00.md?plain=1)
+- [20260921-A-000013-AGUI_通道双备份与基线定稿-给阿宝-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260921-A-000013-AGUI_通道双备份与基线定稿-给阿宝-v1.00.md?plain=1)
+- [20260921-AGUI_REPLY-v2.2.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260921-AGUI_REPLY-v2.2.md?plain=1)
+- [20260921-AGUI_TASK-003-出网白名单任务卡.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260921-AGUI_TASK-003-出网白名单任务卡.md?plain=1)
+- [20260922-A-000015-AGUI_exe已打包与通道纠正-给阿宝-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000015-AGUI_exe已打包与通道纠正-给阿宝-v1.00.md?plain=1)
+- [20260922-A-000018-AGUI_exe无反应已修与plain突破-给阿宝-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000018-AGUI_exe无反应已修与plain突破-给阿宝-v1.00.md?plain=1)
+- [20260922-A-000023-AGUI_空白页根因与修复-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000023-AGUI_空白页根因与修复-给阿宝.md?plain=1)
+- [20260922-A-000026-AGUI_02178界面修复与端口整改-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000026-AGUI_02178界面修复与端口整改-给阿宝.md?plain=1)
+- [20260922-A-000029-AGUI_v2.08大修与端口规范-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000029-AGUI_v2.08大修与端口规范-给阿宝.md?plain=1)
+- [20260922-A-000031-AGUI_02188文件夹效果与图标澄清-给阿宝.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000031-AGUI_02188文件夹效果与图标澄清-给阿宝.md.enc?plain=1)
+- [20260922-A-000033-AGUI_02192三项修复与favicon-给阿宝.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000033-AGUI_02192三项修复与favicon-给阿宝.md.enc?plain=1)
+- [20260922-A-000035-AGUI_02197图标与顶栏改版-给阿宝.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000035-AGUI_02197图标与顶栏改版-给阿宝.md.enc?plain=1)
+- [20260922-A-000037-AGUI_02201拖拽图片与链接跳转-给阿宝.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260922-A-000037-AGUI_02201拖拽图片与链接跳转-给阿宝.md.enc?plain=1)
+- [20260923-A-000039-AGUI_02204阿宝版九项与打印-给阿宝.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260923-A-000039-AGUI_02204阿宝版九项与打印-给阿宝.md.enc?plain=1)
+- [20260923-A-000041-AGUI_v2.14交付与拖拽真因-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260923-A-000041-AGUI_v2.14交付与拖拽真因-给阿宝.md?plain=1)
+- [20260923-A-000042-AGUI_v2.15交付与第一张图真凶-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260923-A-000042-AGUI_v2.15交付与第一张图真凶-给阿宝.md?plain=1)
+- [20260923-A-000043-AGUI_v2.16交付-给阿豆.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260923-A-000043-AGUI_v2.16交付-给阿豆.md?plain=1)
+- [20260923-A-000043-AGUI_v2.16交付与通道修复-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260923-A-000043-AGUI_v2.16交付与通道修复-给阿宝.md?plain=1)
+- [A-000073-AGUI_02380_writeback_crosscell_and_colab.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000073-AGUI_02380_writeback_crosscell_and_colab.md?plain=1)
+- [A-000074-AGUI_02379_crosscell_prevention_review.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000074-AGUI_02379_crosscell_prevention_review.md?plain=1)
+- [A-000075-AGUI_writeback_diag_helpers.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000075-AGUI_writeback_diag_helpers.md?plain=1)
+- [A-000077-AGUI_typing_nopersist_verify.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000077-AGUI_typing_nopersist_verify.md?plain=1)
+- [A-000078-AGUI_prefs_restore_redraw.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000078-AGUI_prefs_restore_redraw.md?plain=1)
+- [A-000079-AGUI_tree_and_searchbox_review.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000079-AGUI_tree_and_searchbox_review.md?plain=1)
+- [A-000081-AGUI_button_and_dd_fix.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000081-AGUI_button_and_dd_fix.md?plain=1)
+- [A-000084-AGUI_searchbox_css_not_working.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000084-AGUI_searchbox_css_not_working.md?plain=1)
+- [A-000085-AGUI_iife_scope_css_traydir.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000085-AGUI_iife_scope_css_traydir.md?plain=1)
+- [ABao_md_viewer_v2.15_src.zip](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/ABao_md_viewer_v2.15_src.zip?plain=1)
+- [AGUI_PROFILE.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AGUI_PROFILE.md?plain=1)
+- [AGUI_TASK-002-能力验证.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AGUI_TASK-002-能力验证.md?plain=1)
+- [AGUI_WELCOME-通道开通说明.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AGUI_WELCOME-通道开通说明.md?plain=1)
+- [CMD-20260923-004-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-004-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20260923-004-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-004-02-AGUI-to-ADou.md?plain=1)
+- [CMD-20260923-005-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-005-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20260923-005-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-005-02-AGUI-to-ADou.md?plain=1)
+- [CMD-20260923-006-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-006-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20260923-006-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-006-02-AGUI-to-ADou.md?plain=1)
+- [CMD-20260923-007-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-007-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20260923-007-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-007-02-AGUI-to-ADou.md?plain=1)
+- [CMD-20260928-008-02-AGUI-to-ABao-memory-loss-protocol.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260928-008-02-AGUI-to-ABao-memory-loss-protocol.md?plain=1)
+- [CMD-20260930-009-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260930-009-01-AGUI-to-ABao.md?plain=1)
+- [markdown_test_v1.01.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown_test_v1.01.md?plain=1)
+- [markdown效果测试-v1.01.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown效果测试-v1.01.md?plain=1)
+- [markdown效果测试.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown效果测试.md?plain=1)
+- [test-full.js](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/test-full.js?plain=1)
+- [test-link-handler.js](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/test-link-handler.js?plain=1)
+- [zkt-capability-matrix-v1.01.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/zkt-capability-matrix-v1.01.md.enc?plain=1)
+- [zkt-design-note-v1.00.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/zkt-design-note-v1.00.md.enc?plain=1)
+- [zkt-module-migration-plan.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/zkt-module-migration-plan.md.enc?plain=1)
+- [zkt-prototype-b.html.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/zkt-prototype-b.html.enc?plain=1)
+- [投递清单.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/投递清单.md?plain=1)
+
+> ⚠️ 二进制（zip/png/ico/exe）走桥**结构性不可达**，请勿投。
+
+*AGui（阿鬼）👻 · INDEX 自动生成 · bridge_abao.py*
