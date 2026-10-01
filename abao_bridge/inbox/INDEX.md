@@ -5,7 +5,12 @@
 
 ## 本轮新增
 
-- [CMD-20261001-004-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-004-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20261001-006-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-006-01-AGUI-to-ABao.md?plain=1)
+- [总控台-原型B-推倒重建.html](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-原型B-推倒重建.html?plain=1)
+- [总控台-能力矩阵-v1.08.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-能力矩阵-v1.08.md?plain=1)
+- [总控台版本更迭信息.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台版本更迭信息.md?plain=1)
+- [本地开源模型部署评估-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/本地开源模型部署评估-v1.00.md?plain=1)
+- [AI协作-能力边界与第三AI建议-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AI协作-能力边界与第三AI建议-v1.00.md?plain=1)
 
 ## 全部在库文件
 
@@ -46,6 +51,7 @@
 - [AGUI_PROFILE.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AGUI_PROFILE.md?plain=1)
 - [AGUI_TASK-002-能力验证.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AGUI_TASK-002-能力验证.md?plain=1)
 - [AGUI_WELCOME-通道开通说明.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AGUI_WELCOME-通道开通说明.md?plain=1)
+- [AI协作-能力边界与第三AI建议-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AI协作-能力边界与第三AI建议-v1.00.md?plain=1)
 - [CMD-20260923-004-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-004-01-AGUI-to-ABao.md?plain=1)
 - [CMD-20260923-004-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-004-02-AGUI-to-ADou.md?plain=1)
 - [CMD-20260923-005-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-005-01-AGUI-to-ABao.md?plain=1)
@@ -57,6 +63,7 @@
 - [CMD-20260928-008-02-AGUI-to-ABao-memory-loss-protocol.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260928-008-02-AGUI-to-ABao-memory-loss-protocol.md?plain=1)
 - [CMD-20260930-009-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260930-009-01-AGUI-to-ABao.md?plain=1)
 - [CMD-20261001-004-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-004-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20261001-006-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-006-01-AGUI-to-ABao.md?plain=1)
 - [R27-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/R27-01-AGUI-to-ABao.md?plain=1)
 - [R27-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/R27-02-AGUI-to-ADou.md?plain=1)
 - [markdown_test_v1.01.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown_test_v1.01.md?plain=1)
@@ -68,7 +75,11 @@
 - [zkt-design-note-v1.00.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/zkt-design-note-v1.00.md.enc?plain=1)
 - [zkt-module-migration-plan.md.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/zkt-module-migration-plan.md.enc?plain=1)
 - [zkt-prototype-b.html.enc](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/zkt-prototype-b.html.enc?plain=1)
+- [总控台-原型B-推倒重建.html](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-原型B-推倒重建.html?plain=1)
+- [总控台-能力矩阵-v1.08.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-能力矩阵-v1.08.md?plain=1)
+- [总控台版本更迭信息.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台版本更迭信息.md?plain=1)
 - [投递清单.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/投递清单.md?plain=1)
+- [本地开源模型部署评估-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/本地开源模型部署评估-v1.00.md?plain=1)
 
 > ⚠️ 二进制（zip/png/ico/exe）走桥**结构性不可达**，请勿投。
 
