@@ -2,15 +2,7 @@
 
 > 取件：读本文件即可，**无需主公转发附件**。
 > 链接形态一律 `blob/<path>?plain=1`（条件③）。
-
-## 本轮新增
-
-- [CMD-20261001-006-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-006-01-AGUI-to-ABao.md?plain=1)
-- [总控台-原型B-推倒重建.html](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-原型B-推倒重建.html?plain=1)
-- [总控台-能力矩阵-v1.08.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-能力矩阵-v1.08.md?plain=1)
-- [总控台版本更迭信息.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台版本更迭信息.md?plain=1)
-- [本地开源模型部署评估-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/本地开源模型部署评估-v1.00.md?plain=1)
-- [AI协作-能力边界与第三AI建议-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AI协作-能力边界与第三AI建议-v1.00.md?plain=1)
+> 🔑 **令牌到期**：2026-10-31（剩 **29** 天）
 
 ## 全部在库文件
 
