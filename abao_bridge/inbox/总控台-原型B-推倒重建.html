@@ -3,47 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DHSTUDIO 作战指挥中心 · 原型B「推倒重建」（静态原型 v1.08 · 02794 · 主区 D1/D2/B1 + 顶部 20 格(字体+1) · 次区 12 张 · 已植入真源快照）</title>
+<title>DHSTUDIO 作战指挥中心 · 原型B「推倒重建」（静态原型 v1.09 · 02801 · 主区 D1/D2/B1 + 顶部 20 格 · 次区 12 张 · 真源快照已植入）</title>
 <!--
-  总控台 静态原型 B · v1.08
+  总控台 静态原型 B · v1.09
   ============================================================
-  · v1.08（02794 主公令）相对 v1.07 的四处改动：
-      ① **顶部总览字体 +1 号**：`.v` 15→16px、`.l` 9.5→10.5px、`.no` 8.5→9.5px、`.u` 9→10px；
-         卡宽 `min-width` 66→80px、`.l` 加 `padding-right:16px` ⇒ **文字不重叠**（02794 要求）
-      ② **开始植入功能**：内置"真源快照"回填（`_diag/总控台-数据快照.json`），
-         取不到的键**保留静态值并标 pending**（**不伪装成真值**）
-      ③ 页面下部新增两个折叠窗：**「能力矩阵简介」** + **「版本更迭」**（主区 02794 令）
-      ④ 版本信息**抽到** `总控台版本更迭信息.md`（唯一真源）
+  · 🆕 02801 主公令：**页面「大篇幅版本信息」已全部外置** —— 每版"改了什么 / 为什么"、
+    版本明细表、版本规则本 ⇒ 统统一处：`总控台版本更迭信息.md`（**唯一真源**）。
+    ⇒ **本页不再罗列**版本明细（保持页面简洁）；页面仅留一行指针链接。
 
-  · 总控台 静态原型 B · v1.07
-  ============================================================
-  · v1.07（02789 + 02791-D2/D4）相对 v1.06 的四处改动：
-      ① 顶部总览「上不封顶、一排不够两排」（02789 主公令）：T 格 16 → 20
-         （+T17 桥·PAT剩余 / T18 软删待审 / T19 本轮批次 / T20 记忆中枢字符）
-         并给关键格加**趋势箭头**（▲▼ vs 近 3 日均值）（02791-D2①）
-      ② **次区补满 12 张**（02791-D4）：新增 R4「卡片↔真源 对拍」（本轮 D5 新建能力的呈现位）
-      ③ **D1★ 待决策加「已等待时长」**（02791-D2②）：超阈值转橙
-      ④ 桥状态格（T3）**并入 PAT 剩余天数**（阿宝 A-000150-P1 建议：桥是"今天这个故障的显示器"）
+  · 升级铁律：**改前必备份** → `_diag/原型B-版本备份/`；步长一律 **+0.01**；
+    版本号**同步三处**（页面 title/品牌行/角标 · `总控台版本更迭信息.md` · `总控台-能力矩阵-vX.YY.md`）。
 
-  · 总控台 静态原型 B · v1.05
-  ============================================================
-  · 02778 主公原话：「总控台原型B，v1.04，以后升级前，老版本要备份，因为我要打开新老版本做比较。
-    静态页面上，左侧栏目可以更多项目，中间区域卡片密度合适了，主卡第三张位置换成"神经网络"
-    即上一个专轮确定的那些，主要监测你是否有失忆、降智风险，再将上一版在中间页面中去掉的功能
-    归集到左侧面板，顶上的界面还能多放一些数据。」
+  · 卡片编号体系：T(顶格 20) · D/N(主区 3) · P/B/R(次区 12) · K(进化归档 5) · S(储备 5) · N(神经)
+    规则：① 稳定（重排不改号）② 看号知区知层级 ③ 可增删（移除作废不重用）④ 可朗读
 
-  · 本版（v1.05）相对 v1.04 的六处改动：
-      ① 升级前**已备份 v1.04** → `_diag/原型B-版本备份/原型B-v1.04-<时间戳>.html`（供新老对比）
-      ② **主卡第三张**：D4 网络桥 → **N1 神经网络**（失忆/降智监测；桥 02772 已放弃）
-      ③ **左栏扩容**：9 项 → 26 项（"上一版中间去掉的功能"= 记忆重建/断点续传/自进化/网络桥，全部归集左栏）
-      ④ **顶部加数据**：T 格 9 → 12（+T10 神经指数 / T11 待补数据 / T12 最后备份）
-      ⑤ **中间密度**：保持 v1.04 现状（hero 3 + tiles 12）—— 主公批示"密度合适"
-      ⑥ **编号体系**：采纳阿豆建议，定为"**区字母 + 序号**"（D/N=主 · P/B/R=次 · K/S=参 · T=顶格）
-
-  · 卡片编号体系：
-      T(顶格 T1~T12) D/N(主区) P/B/R(次区) K(进化归档) S(储备) N(神经)
-      规则：① 稳定（重排不改号）② 看号知区知层级 ③ 可增删（移除作废不重用）④ 可朗读
-  · v1.06：AGui（阿鬼）👻 · 2026-10-01 · CMD-20261001-004-02783
+  · v1.09：AGui（阿鬼）👻 · 2026-10-02 · CMD-20261001-007-02801
 -->
 <style>
   :root{
@@ -64,7 +38,10 @@
                   display:flex;align-items:center;justify-content:center;font-weight:900;color:#04202a;font-size:12px}
   .rb-brand b{font-size:14.5px;letter-spacing:.5px}
   .rb-brand small{display:block;color:var(--muted);font-size:10.5px}
-  .rb-group{display:flex;flex-direction:column;justify-content:center;padding:5px 8px;border-right:1px solid var(--line)}
+  .rb-group{display:flex;flex-direction:column;justify-content:center;padding:5px 8px;border-right:1px solid var(--line);
+            border-left:3px solid transparent}
+  .rb-g1{border-left-color:var(--rose)} .rb-g2{border-left-color:var(--amber)}
+  .rb-g3{border-left-color:var(--lime)} .rb-g4{border-left-color:var(--blue)}
   .rb-group .gt{font-size:10.5px;letter-spacing:.6px;margin-bottom:3px;color:var(--dim);white-space:nowrap}
   .rb-cells{display:flex;gap:6px;flex-wrap:wrap}
   .cell{min-width:80px;background:var(--ink);border:1px solid var(--line2);border-radius:8px;padding:5px 9px;position:relative}
@@ -202,9 +179,9 @@
   <!-- 顶部三类十二格（T1~T12） -->
   <div class="ribbon">
     <div class="rb-brand"><div class="logo">DH</div>
-      <div><b>作战指挥中心</b><small>原型B · v1.08 · 主区 D1/D2/B1 · 顶格 20</small></div></div>
+      <div><b>作战指挥中心</b><small>原型B · v1.09 · 主区 D1/D2/B1 · 顶格 20</small></div></div>
 
-    <div class="rb-group"><div class="gt">🔴 要不要我干预</div><div class="rb-cells">
+    <div class="rb-group rb-g1"><div class="gt">🔴 要不要我干预</div><div class="rb-cells">
       <div class="cell"><span class="no">T1</span><div class="l">待决策</div>
         <div class="v" data-src="_待办清单.md#decision">2<small class="ar u">▲</small></div><div class="u">01:20 · 近3日↑</div></div>
       <div class="cell"><span class="no">T2</span><div class="l">待办</div>
@@ -217,7 +194,7 @@
         <div class="v" data-src="bridge_abao.py--check#pat_days">30<small>天</small></div><div class="u">到期前告警</div></div>
     </div></div>
 
-    <div class="rb-group"><div class="gt">🟡 会不会坏</div><div class="rb-cells">
+    <div class="rb-group rb-g2"><div class="gt">🟡 会不会坏</div><div class="rb-cells">
       <div class="cell ok"><span class="no">T4</span><div class="l">端口</div>
         <div class="v" data-src="/api/system_pulse#ports.up">3<small>/3</small></div><div class="u">01:20</div></div>
       <div class="cell"><span class="no">T5</span><div class="l">数据根</div>
@@ -230,7 +207,7 @@
         <div class="v" data-src="软删库#pending">0</div><div class="u">清理留痕</div></div>
     </div></div>
 
-    <div class="rb-group"><div class="gt">🟢 进展如何</div><div class="rb-cells">
+    <div class="rb-group rb-g3"><div class="gt">🟢 进展如何</div><div class="rb-cells">
       <div class="cell"><span class="no">T7</span><div class="l">进行中</div>
         <div class="v" data-src="task_archive.json#running">5<small class="ar d">▼</small></div><div class="u">01:20 · 近3日↓</div></div>
       <div class="cell"><span class="no">T8</span><div class="l">今日完成</div>
@@ -243,7 +220,7 @@
         <div class="v">专09</div><div class="u">CMD-20261001-005</div></div>
     </div></div>
 
-    <div class="rb-group"><div class="gt">🔵 协作 / 质量</div><div class="rb-cells">
+    <div class="rb-group rb-g4"><div class="gt">🔵 协作 / 质量</div><div class="rb-cells">
       <div class="cell"><span class="no">T13</span><div class="l">体检时间</div>
         <div class="v" data-src="_diag/自检日志.json#last_time">21:00</div><div class="u">收尾自检</div></div>
       <div class="cell ok"><span class="no">T14</span><div class="l">版本一致</div>
@@ -449,32 +426,13 @@
         </div></div>
       </details>
 
-      <div class="note">
-        <b>本版（v1.07）改了什么 / 为什么</b>（02789 / 02791-D2·D4 主公令）：<br>
-        ① <b>顶部总览「上不封顶、一排不够两排」</b>（02789）：T 格 <b>16 → 20</b>，新增
-           <b>T17 桥·PAT剩余 / T18 软删待审 / T19 本轮批次 / T20 记忆中枢字符（防截断）</b>。<br>
-        ② <b>趋势箭头</b>（02791-D2①）：T1 待决策 / T7 进行中 / T9 积分 加 <b>▲▼</b>（对比近 3 日均值）；
-           <b>桥状态 T3 并入 PAT 剩余天数</b>（阿宝 A-000150-P1：桥是"故障显示器"）。<br>
-        ③ <b>次区补满 12 张</b>（02791-D4）：新增 <b>R4「卡片↔真源 对拍」</b>（本轮 D5 新建能力的呈现位）。<br>
-        ④ <b>D1★ 加「已等待时长」</b>（02791-D2②）：<code>⏱ 最久已等待 3 天</code>，超阈值（2 天）转橙。<br>
-        ⑤ <b>文档-实现漂移修正</b>：v1.06 note 曾误称"新增 T13 修复断言/T14 错题本/T15 阿豆待办/T16 阿宝回执"，
-           实为"T13 体检时间/T14 版本一致/T15 今日待验收/T16 协作待处理" ⇒ 本版据实修正。<br><br>
-
-        <b>本版（v1.06）改了什么 / 为什么</b>（02783 / 02786-D3 主公令）：<br>
-        ① <b>主区第三张卡</b>：N1 神经网络 → <b>B1 任务进度（当前专轮）</b>；N1 <b>降入次区</b>（仍监测失忆/降智）。<br>
-        ② <b>顶部总览 12 → 16 格</b>：新增 <b>T13 修复断言 / T14 错题本 / T15 阿豆待办 / T16 阿宝回执</b>（新增一组 🔵 协作·质量）。<br>
-        ③ <b>02786-D3 降级</b>：<b>B3 概览计数</b>（与顶格重复）+ <b>S1</b>（占位）⇒ <b>移入折叠「参考区 · 降级」</b>。<br>
-        ④ 中间密度不变（次区仍 12 张：P1~P4 · B1 已上主区 ⇒ 由 N1 补位）；升级前 **v1.05 已备份**。<br><br>
-        <b>本版（v1.05）改了什么 / 为什么</b>（02778 主公批示）：<br>
-        ① <b>升级前已备份 v1.04</b> ⇒ <code>_diag/原型B-版本备份/原型B-v1.04-20261001_1533.html</code>（供主公<b>新老对比</b>）。<br>
-        ② <b>主卡第三张</b>：D4 网络桥 → <b>N1 神经网络</b>（失忆/降智监测）—— 桥 02772 已放弃，主卡位改放"<b>要不要干预阿鬼</b>"（三探针：触发词一致性 / 规则遵守率 / 错题重犯率 ⇒ 红黄绿）。<br>
-        ③ <b>左栏扩容</b>：9 项 → <b>26 项</b>，把"<b>上一版中间去掉的功能</b>"（记忆重建 S2 / 断点续传 S3 / 自进化 S4 / 网络桥 S5）<b>全部归集到左栏</b>，逐张可点。<br>
-        ④ <b>顶部加数据</b>：T 格 9 → <b>12</b>，新增 <b>T10 神经指数 / T11 待补数据（C 库落后天数）/ T12 最后备份</b>。<br>
-        ⑤ <b>中间密度</b>：<b>保持 v1.04 现状</b>（hero 3 + tiles 12）—— 主公批示"密度合适"。<br>
-        ⑥ <b>编号体系</b>：采纳阿豆建议，定为「<b>区字母 + 序号</b>」（D/N=主 · P/B/R=次 · K/S=参 · T=顶格）；<b>移除作废不重用</b>。<br>
-        ⑦ <b>可机检</b>：业务数字全带 <code>data-src</code>；左栏新增按钮同步登记进能力矩阵 v1.05（<b>可点 39 / 未登记 0</b>）。<br>
-        ⑧ <b>网络桥已修复（02777）</b>：GitHub 不支持程序化签发 PAT ⇒ <b>模拟碳基网页操作</b>（浏览器自动化）<b>签发成功</b>；令牌鉴权通过 + 合流远端 9/23~27 历史 + 推送成功（<code>5880483..22d58d6</code>）⇒ 桥恢复可用（T3 = 通）。
-      </div>
+      <!-- ══ 02801（主公令）：页面「大篇幅版本信息」已**全部移出**本页 ══
+           移入唯一真源 → `总控台版本更迭信息.md`（保持页面简洁） -->
+      <p style="margin:14px 0 0;color:var(--dim);font-size:11.5px">
+        📄 本页**版本更迭**与每版"改了什么 / 为什么" ⇒ 见
+        <a href="总控台版本更迭信息.md">总控台版本更迭信息.md</a>（**唯一真源**）
+        ｜ 历史版本备份：<code>_diag/原型B-版本备份/</code>
+      </p>
 
       <!-- ══ 02794：能力矩阵简介（折叠 · 页面下部）══ -->
       <details class="fold" id="matrix-mod">
@@ -500,29 +458,15 @@
       <!-- ══ 02794：版本更迭（折叠 · 参考回测页面处理办法）══ -->
       <details class="fold" id="changelog-mod">
         <summary class="modhd"><span class="modbadge">★</span><b style="color:var(--fg)">版本更迭</b>
-          <span class="modsub">迭代留痕 · 简洁有致（01580）—— 点击展开</span></summary>
+          <span class="modsub">当前 v1.09 · 明细已外置（02801）—— 点击展开</span></summary>
         <div class="body">
-          <div class="note-box">
-            📌 <b>版本规则本（00769）</b>：版本递增须同步三处 —— ① 页面 <code>title</code> / 品牌行 / 角标
-            ② <code>总控台版本更迭信息.md</code> 对应行 ③ <code>总控台-能力矩阵-vX.YY.md</code> 版本号。
-            另：<b>升级前必先备份</b> → <code>_diag/原型B-版本备份/</code>（02778 令）；步长一律 <b>+0.01</b>。
-          </div>
-          <table class="clt">
-            <thead><tr><th>版本</th><th>日期</th><th>改了什么</th></tr></thead>
-            <tbody>
-              <tr><td>v1.08</td><td>10-01</td><td><b>顶部总览字体 +1 号</b>（不重叠）｜<b>开始植入功能</b>（真源快照）｜新增「能力矩阵简介 + 版本更迭」两折叠窗｜版本信息抽到 <code>总控台版本更迭信息.md</code></td></tr>
-              <tr><td>v1.07</td><td>10-01</td><td>顶格 <b>16→20</b>（上不封顶）｜趋势箭头 ▲▼｜D1★「已等待时长」｜次区补满 <b>12</b> 张｜桥并入 PAT 剩余天数</td></tr>
-              <tr><td>v1.06</td><td>10-01</td><td>主区第三张 → <b>B1★</b>（N1 降次）｜顶格 <b>12→16</b>｜B3/S1 降级｜采纳 ★ 前缀</td></tr>
-              <tr><td>v1.05</td><td>10-01</td><td>主卡第三张 → <b>N1 神经网络</b>｜左栏 <b>9→26</b> 项｜顶部 <b>9→12</b> 格</td></tr>
-              <tr><td>v1.04</td><td>10-01</td><td><b>主次三档</b>（主 3 大卡 / 次弱化 / 参折叠）｜<b>卡片编号体系</b>发布</td></tr>
-              <tr><td>v1.03</td><td>10-01</td><td>一排四张 → 画布「看→控→查」｜顶部 <b>三类九格</b>｜窄屏逐级降列</td></tr>
-              <tr><td>v1.02</td><td>10-01</td><td>顶部 <b>10 项</b>｜底控 <b>14 动作</b>｜<code>data-src</code> 38 处</td></tr>
-              <tr><td>v1.01</td><td>10-01</td><td>顶部 5 项｜左栏 5 组 23 项｜画布 <b>A~E 五区</b>全量（M1~M12 落位）</td></tr>
-              <tr><td>v1.00</td><td>09-30</td><td><b>原型B「推倒重建」诞生</b>（主公选 B）</td></tr>
-            </tbody>
-          </table>
-          <p style="margin:10px 0 0;font-size:11.5px;color:var(--muted)">
-            📎 明细真源：<a href="总控台版本更迭信息.md">总控台版本更迭信息.md</a>
+          <p style="margin:0;font-size:12px;color:var(--muted);line-height:1.9">
+            当前版本 <b style="color:var(--cyan)">v1.09</b>（2026-10-02 · CMD-20261001-007 · 总控台专轮-11）。
+            <b>本页不再罗列版本明细</b> —— 02801 主公令：「版本信息都放入 `总控台版本更迭信息.md`，然后删除，以保持页面简洁」。
+          </p>
+          <p style="margin:8px 0 0;font-size:11.5px;color:var(--muted)">
+            📄 完整更迭记录（v1.00 ~ v1.09 + 版本规则本）⇒
+            <a href="总控台版本更迭信息.md">总控台版本更迭信息.md</a>
             ｜ 历史版本备份：<code>_diag/原型B-版本备份/</code>
           </p>
         </div>
@@ -558,8 +502,8 @@
     <span class="cap">高危均需二次确认 + 留痕</span>
   </div>
 </div>
-<div class="flag">⚠ 静态原型 · v1.08 · 主区 D1/D2/B1 · 顶格 20 · 已植入真源快照</div>
-<script id="dh-snapshot" type="application/json">{"generated": "2026-10-01 23:08", "source": "stock/规则中心/总控台-原型B-推倒重建.html", "counts": {"total": 40, "ok": 8, "pending": 32}, "items": {"_待办清单.md#decision": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:decision=值 -->）", "page": "2 / 5", "src_file": "_待办清单.md"}, "_待办清单.md#todo": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:todo=值 -->）", "page": "5", "src_file": "_待办清单.md"}, "bridge_abao.py--check#pat_days": {"status": "pending_parser", "msg": "非结构化源", "page": "30天", "src_file": "bridge_abao.py--check"}, "_diag/神经指数.json#status": {"status": "nolink", "msg": "真源未找到：_diag/神经指数.json", "page": "绿", "src_file": "神经指数.json"}, "/api/system_pulse#ports.up": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "3/3", "src_file": "system_pulse"}, "/api/system_pulse#disk.used": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "25.9GB", "src_file": "system_pulse"}, "/api/system_pulse#db.c_latest": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "0821", "src_file": "system_pulse"}, "仓库监控.jsonl#db_lag_days": {"status": "nolink", "msg": "真源未找到：仓库监控.jsonl", "page": "40天", "src_file": "仓库监控.jsonl"}, "软删库#pending": {"status": "pending_parser", "msg": "非结构化源", "page": "0", "src_file": "软删库"}, "task_archive.json#running": {"status": "ok", "value": "4", "page": "5▼", "src_file": "task_archive.json", "via": "via_alias"}, "task_archive.json#done_today": {"status": "nokey", "msg": "真源无此键「done_today」", "page": "0", "src_file": "task_archive.json"}, "积分台账.md#total": {"status": "ok", "value": "520", "page": "520▲", "src_file": "积分台账.md", "via": ""}, "备份台账.json#last_time": {"status": "nolink", "msg": "真源未找到：备份台账.json", "page": "22:05", "src_file": "备份台账.json"}, "_diag/自检日志.json#last_time": {"status": "nolink", "msg": "真源未找到：_diag/自检日志.json", "page": "21:00", "src_file": "自检日志.json"}, "版本一致性检查#result": {"status": "pending_parser", "msg": "非结构化源", "page": "✅", "src_file": "版本一致性检查"}, "task_archive.json#review": {"status": "nokey", "msg": "真源无此键「review」", "page": "2", "src_file": "task_archive.json"}, "回执索引.md#open_total": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:open_total=值 -->）", "page": "1", "src_file": "回执索引.md"}, "../memory/MEMORY.md#chars": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:chars=值 -->）", "page": "2885/3000", "src_file": "MEMORY.md"}, "_待办清单.md#oldest_wait_days": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:oldest_wait_days=值 -->）", "page": "⏱ 最久已等待 3 天（阈值 2 天 ⇒ 转橙）", "src_file": "_待办清单.md"}, "task_archive.json#cur_total": {"status": "nokey", "msg": "真源无此键「cur_total」", "page": "6/6 条", "src_file": "task_archive.json"}, "task_archive.json#cur_block": {"status": "nokey", "msg": "真源无此键「cur_block」", "page": "0", "src_file": "task_archive.json"}, "/api/system_pulse#p8765": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "8765ON", "src_file": "system_pulse"}, "/api/system_pulse#p8767": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "8767ON", "src_file": "system_pulse"}, "/api/system_pulse#worker.count": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "×8", "src_file": "system_pulse"}, "仓库监控.jsonl#repo_gb": {"status": "nolink", "msg": "真源未找到：仓库监控.jsonl", "page": "1.87GB", "src_file": "仓库监控.jsonl"}, "仓库监控.jsonl#data_gb": {"status": "nolink", "msg": "真源未找到：仓库监控.jsonl", "page": "25.9GB", "src_file": "仓库监控.jsonl"}, "task_archive.json#peak_per_day": {"status": "nokey", "msg": "真源无此键「peak_per_day」", "page": "9条/日", "src_file": "task_archive.json"}, "回执索引.md#abao_open": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:abao_open=值 -->）", "page": "0", "src_file": "回执索引.md"}, "回执索引.md#adou_open": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:adou_open=值 -->）", "page": "1", "src_file": "回执索引.md"}, "UI规则.md#levels": {"status": "ok", "value": "3", "page": "3", "src_file": "UI规则.md", "via": ""}, "总控台-能力矩阵-v1.08.md#actions": {"status": "ok", "value": "40", "page": "40", "src_file": "总控台-能力矩阵-v1.08.md", "via": ""}, "_隔离区#pending": {"status": "pending_parser", "msg": "非结构化源", "page": "0", "src_file": "_隔离区"}, "卡片对拍.py#hooked": {"status": "ok", "value": "40", "page": "44", "src_file": "卡片对拍.py", "via": ""}, "规则错题本.md#count": {"status": "ok", "value": "141", "page": "137条", "src_file": "规则错题本.md", "via": ""}, "规则错题本.md#vaccine": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:vaccine=值 -->）", "page": "60+", "src_file": "规则错题本.md"}, "优化建议库.json#open": {"status": "nokey", "msg": "真源无此键「open」", "page": "12open", "src_file": "优化建议库.json"}, "优化建议库.json#adopted": {"status": "nokey", "msg": "真源无此键「adopted」", "page": "28", "src_file": "优化建议库.json"}, "修复断言.py#count": {"status": "ok", "value": "18", "page": "16", "src_file": "修复断言.py", "via": ""}, "task_archive.json#done": {"status": "ok", "value": "164", "page": "172", "src_file": "task_archive.json", "via": "via_alias"}, "软删库#count": {"status": "pending_parser", "msg": "非结构化源", "page": "0 待审", "src_file": "软删库"}}}</script>
+<div class="flag">⚠ 静态原型 · v1.09 · 主区 D1/D2/B1 · 顶格 20 · 版本明细已外置</div>
+<script id="dh-snapshot" type="application/json">{"generated": "2026-10-02 00:31", "source": "stock/规则中心/总控台-原型B-推倒重建.html", "counts": {"total": 40, "ok": 10, "pending": 30}, "items": {"_待办清单.md#decision": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:decision=值 -->）", "page": "2 / 5", "src_file": "_待办清单.md"}, "_待办清单.md#todo": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:todo=值 -->）", "page": "5", "src_file": "_待办清单.md"}, "bridge_abao.py--check#pat_days": {"status": "pending_parser", "msg": "非结构化源", "page": "30天", "src_file": "bridge_abao.py--check"}, "_diag/神经指数.json#status": {"status": "nolink", "msg": "真源未找到：_diag/神经指数.json", "page": "绿", "src_file": "神经指数.json"}, "/api/system_pulse#ports.up": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "3/3", "src_file": "system_pulse"}, "/api/system_pulse#disk.used": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "25.9GB", "src_file": "system_pulse"}, "/api/system_pulse#db.c_latest": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "0821", "src_file": "system_pulse"}, "仓库监控.jsonl#db_lag_days": {"status": "nolink", "msg": "真源未找到：仓库监控.jsonl", "page": "40天", "src_file": "仓库监控.jsonl"}, "软删库#pending": {"status": "pending_parser", "msg": "非结构化源", "page": "0", "src_file": "软删库"}, "task_archive.json#running": {"status": "ok", "value": "4", "page": "5▼", "src_file": "task_archive.json", "via": "via_alias"}, "task_archive.json#done_today": {"status": "nokey", "msg": "真源无此键「done_today」", "page": "0", "src_file": "task_archive.json"}, "积分台账.md#total": {"status": "ok", "value": "520", "page": "520▲", "src_file": "积分台账.md", "via": ""}, "备份台账.json#last_time": {"status": "nolink", "msg": "真源未找到：备份台账.json", "page": "22:05", "src_file": "备份台账.json"}, "_diag/自检日志.json#last_time": {"status": "nolink", "msg": "真源未找到：_diag/自检日志.json", "page": "21:00", "src_file": "自检日志.json"}, "版本一致性检查#result": {"status": "pending_parser", "msg": "非结构化源", "page": "✅", "src_file": "版本一致性检查"}, "task_archive.json#review": {"status": "nokey", "msg": "真源无此键「review」", "page": "2", "src_file": "task_archive.json"}, "回执索引.md#open_total": {"status": "ok", "value": "10", "page": "1", "src_file": "回执索引.md", "via": ""}, "../memory/MEMORY.md#chars": {"status": "ok", "value": "2643", "page": "2885/3000", "src_file": "MEMORY.md", "via": ""}, "_待办清单.md#oldest_wait_days": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:oldest_wait_days=值 -->）", "page": "⏱ 最久已等待 3 天（阈值 2 天 ⇒ 转橙）", "src_file": "_待办清单.md"}, "task_archive.json#cur_total": {"status": "nokey", "msg": "真源无此键「cur_total」", "page": "6/6 条", "src_file": "task_archive.json"}, "task_archive.json#cur_block": {"status": "nokey", "msg": "真源无此键「cur_block」", "page": "0", "src_file": "task_archive.json"}, "/api/system_pulse#p8765": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "8765ON", "src_file": "system_pulse"}, "/api/system_pulse#p8767": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "8767ON", "src_file": "system_pulse"}, "/api/system_pulse#worker.count": {"status": "pending_parser", "msg": "API 源（需服务在线）", "page": "×8", "src_file": "system_pulse"}, "仓库监控.jsonl#repo_gb": {"status": "nolink", "msg": "真源未找到：仓库监控.jsonl", "page": "1.87GB", "src_file": "仓库监控.jsonl"}, "仓库监控.jsonl#data_gb": {"status": "nolink", "msg": "真源未找到：仓库监控.jsonl", "page": "25.9GB", "src_file": "仓库监控.jsonl"}, "task_archive.json#peak_per_day": {"status": "nokey", "msg": "真源无此键「peak_per_day」", "page": "9条/日", "src_file": "task_archive.json"}, "回执索引.md#abao_open": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:abao_open=值 -->）", "page": "0", "src_file": "回执索引.md"}, "回执索引.md#adou_open": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:adou_open=值 -->）", "page": "1", "src_file": "回执索引.md"}, "UI规则.md#levels": {"status": "ok", "value": "3", "page": "3", "src_file": "UI规则.md", "via": ""}, "总控台-能力矩阵-v1.08.md#actions": {"status": "ok", "value": "40", "page": "40", "src_file": "总控台-能力矩阵-v1.08.md", "via": ""}, "_隔离区#pending": {"status": "pending_parser", "msg": "非结构化源", "page": "0", "src_file": "_隔离区"}, "卡片对拍.py#hooked": {"status": "ok", "value": "40", "page": "44", "src_file": "卡片对拍.py", "via": ""}, "规则错题本.md#count": {"status": "ok", "value": "141", "page": "137条", "src_file": "规则错题本.md", "via": ""}, "规则错题本.md#vaccine": {"status": "pending_parser", "msg": "md 源缺 DHKEY 标记（约定：<!-- DHKEY:vaccine=值 -->）", "page": "60+", "src_file": "规则错题本.md"}, "优化建议库.json#open": {"status": "nokey", "msg": "真源无此键「open」", "page": "12open", "src_file": "优化建议库.json"}, "优化建议库.json#adopted": {"status": "nokey", "msg": "真源无此键「adopted」", "page": "28", "src_file": "优化建议库.json"}, "修复断言.py#count": {"status": "ok", "value": "20", "page": "16", "src_file": "修复断言.py", "via": ""}, "task_archive.json#done": {"status": "ok", "value": "164", "page": "172", "src_file": "task_archive.json", "via": "via_alias"}, "软删库#count": {"status": "pending_parser", "msg": "非结构化源", "page": "0 待审", "src_file": "软删库"}}}</script>
 <script>
 (function(){
   var el=document.getElementById('dh-snapshot');
@@ -587,6 +531,9 @@
   if(tag){ tag.textContent='真源回填 ' + n + ' 处 ｜ 待接线 ' + m + ' 处'; }
 })();
 </script>
+
+
+
 
 </body>
 </html>
