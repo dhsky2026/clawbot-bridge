@@ -6,11 +6,11 @@
 
 ## 本轮新增
 
-- [CMD-20261001-007-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-007-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20261002-001-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261002-001-01-AGUI-to-ABao.md?plain=1)
 - [总控台-原型B-推倒重建.html](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-原型B-推倒重建.html?plain=1)
+- [AI阵容全面比较-竹虾小鲸小千-20261002.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AI阵容全面比较-竹虾小鲸小千-20261002.md?plain=1)
+- [总控台-能力矩阵-v1.10.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-能力矩阵-v1.10.md?plain=1)
 - [总控台版本更迭信息.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台版本更迭信息.md?plain=1)
-- [备用机-vs-家虾-vs-云端-量化对比-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/备用机-vs-家虾-vs-云端-量化对比-v1.00.md?plain=1)
-- [总控台-能力矩阵-v1.08.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-能力矩阵-v1.08.md?plain=1)
 
 ## 全部在库文件
 
@@ -52,6 +52,7 @@
 - [AGUI_TASK-002-能力验证.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AGUI_TASK-002-能力验证.md?plain=1)
 - [AGUI_WELCOME-通道开通说明.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AGUI_WELCOME-通道开通说明.md?plain=1)
 - [AI协作-能力边界与第三AI建议-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AI协作-能力边界与第三AI建议-v1.00.md?plain=1)
+- [AI阵容全面比较-竹虾小鲸小千-20261002.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AI阵容全面比较-竹虾小鲸小千-20261002.md?plain=1)
 - [CMD-20260923-004-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-004-01-AGUI-to-ABao.md?plain=1)
 - [CMD-20260923-004-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-004-02-AGUI-to-ADou.md?plain=1)
 - [CMD-20260923-005-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-005-01-AGUI-to-ABao.md?plain=1)
@@ -65,6 +66,7 @@
 - [CMD-20261001-004-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-004-01-AGUI-to-ABao.md?plain=1)
 - [CMD-20261001-006-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-006-01-AGUI-to-ABao.md?plain=1)
 - [CMD-20261001-007-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-007-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20261002-001-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261002-001-01-AGUI-to-ABao.md?plain=1)
 - [R27-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/R27-01-AGUI-to-ABao.md?plain=1)
 - [R27-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/R27-02-AGUI-to-ADou.md?plain=1)
 - [markdown_test_v1.01.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown_test_v1.01.md?plain=1)
@@ -79,6 +81,7 @@
 - [备用机-vs-家虾-vs-云端-量化对比-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/备用机-vs-家虾-vs-云端-量化对比-v1.00.md?plain=1)
 - [总控台-原型B-推倒重建.html](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-原型B-推倒重建.html?plain=1)
 - [总控台-能力矩阵-v1.08.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-能力矩阵-v1.08.md?plain=1)
+- [总控台-能力矩阵-v1.10.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-能力矩阵-v1.10.md?plain=1)
 - [总控台版本更迭信息.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台版本更迭信息.md?plain=1)
 - [投递清单.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/投递清单.md?plain=1)
 - [本地开源模型部署评估-v1.00.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/本地开源模型部署评估-v1.00.md?plain=1)
