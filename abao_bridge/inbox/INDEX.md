@@ -5,7 +5,7 @@
 
 ## 本轮新增
 
-- [CMD-20260930-009-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260930-009-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20261001-004-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-004-01-AGUI-to-ABao.md?plain=1)
 
 ## 全部在库文件
 
@@ -29,6 +29,10 @@
 - [20260923-A-000042-AGUI_v2.15交付与第一张图真凶-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260923-A-000042-AGUI_v2.15交付与第一张图真凶-给阿宝.md?plain=1)
 - [20260923-A-000043-AGUI_v2.16交付-给阿豆.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260923-A-000043-AGUI_v2.16交付-给阿豆.md?plain=1)
 - [20260923-A-000043-AGUI_v2.16交付与通道修复-给阿宝.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/20260923-A-000043-AGUI_v2.16交付与通道修复-给阿宝.md?plain=1)
+- [A-000042-AGUI_v2.15_delivery_and_img_rootcause.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000042-AGUI_v2.15_delivery_and_img_rootcause.md?plain=1)
+- [A-000043-AGUI_to_ADou_v2.16.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000043-AGUI_to_ADou_v2.16.md?plain=1)
+- [A-000044-AGUI_v2.15_followup.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000044-AGUI_v2.15_followup.md?plain=1)
+- [A-000045-AGUI_v2.16_delivery_and_channel_fix.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000045-AGUI_v2.16_delivery_and_channel_fix.md?plain=1)
 - [A-000073-AGUI_02380_writeback_crosscell_and_colab.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000073-AGUI_02380_writeback_crosscell_and_colab.md?plain=1)
 - [A-000074-AGUI_02379_crosscell_prevention_review.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000074-AGUI_02379_crosscell_prevention_review.md?plain=1)
 - [A-000075-AGUI_writeback_diag_helpers.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/A-000075-AGUI_writeback_diag_helpers.md?plain=1)
@@ -52,6 +56,9 @@
 - [CMD-20260923-007-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260923-007-02-AGUI-to-ADou.md?plain=1)
 - [CMD-20260928-008-02-AGUI-to-ABao-memory-loss-protocol.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260928-008-02-AGUI-to-ABao-memory-loss-protocol.md?plain=1)
 - [CMD-20260930-009-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20260930-009-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20261001-004-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-004-01-AGUI-to-ABao.md?plain=1)
+- [R27-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/R27-01-AGUI-to-ABao.md?plain=1)
+- [R27-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/R27-02-AGUI-to-ADou.md?plain=1)
 - [markdown_test_v1.01.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown_test_v1.01.md?plain=1)
 - [markdown效果测试-v1.01.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown效果测试-v1.01.md?plain=1)
 - [markdown效果测试.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown效果测试.md?plain=1)
