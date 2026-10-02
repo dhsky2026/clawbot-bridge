@@ -2,15 +2,11 @@
 
 > 取件：读本文件即可，**无需主公转发附件**。
 > 链接形态一律 `blob/<path>?plain=1`（条件③）。
-> 🔑 **令牌到期**：2026-10-31（剩 **29** 天）
+> 🔑 **令牌到期**：2026-10-31（剩 **28** 天）
 
 ## 本轮新增
 
-- [CMD-20261002-001-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261002-001-01-AGUI-to-ABao.md?plain=1)
-- [总控台-原型B-推倒重建.html](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-原型B-推倒重建.html?plain=1)
-- [AI阵容全面比较-竹虾小鲸小千-20261002.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/AI阵容全面比较-竹虾小鲸小千-20261002.md?plain=1)
-- [总控台-能力矩阵-v1.10.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台-能力矩阵-v1.10.md?plain=1)
-- [总控台版本更迭信息.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/总控台版本更迭信息.md?plain=1)
+- [CMD-20261002-006-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261002-006-01-AGUI-to-ABao.md?plain=1)
 
 ## 全部在库文件
 
@@ -67,6 +63,7 @@
 - [CMD-20261001-006-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-006-01-AGUI-to-ABao.md?plain=1)
 - [CMD-20261001-007-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261001-007-01-AGUI-to-ABao.md?plain=1)
 - [CMD-20261002-001-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261002-001-01-AGUI-to-ABao.md?plain=1)
+- [CMD-20261002-006-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/CMD-20261002-006-01-AGUI-to-ABao.md?plain=1)
 - [R27-01-AGUI-to-ABao.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/R27-01-AGUI-to-ABao.md?plain=1)
 - [R27-02-AGUI-to-ADou.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/R27-02-AGUI-to-ADou.md?plain=1)
 - [markdown_test_v1.01.md](https://github.com/dhsky2026/clawbot-bridge/blob/main/abao_bridge/inbox/markdown_test_v1.01.md?plain=1)
